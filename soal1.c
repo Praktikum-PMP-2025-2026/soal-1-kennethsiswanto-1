@@ -12,8 +12,9 @@
  #include <string.h>
 
 
- int floormanual(int x) {
-    if (x < 0) {
+ int floormanual(long x) {
+    int i = (int)x;
+    if (x < 0 && i != 1) {
         return x - 1; // situasi negatif
     }
     return x;
@@ -46,7 +47,9 @@
             }
             
             if(kanan != -1 && arr[j-1] != -1 && j != 0){
-                arr[j] = floormanual((kanan+arr[j-1])/2);
+                long res = 0;
+                res = kanan+arr[j-1]/2;
+                arr[j] = floormanual(res);
             }
             else if(kanan != -1){
                 arr[j] = kanan;

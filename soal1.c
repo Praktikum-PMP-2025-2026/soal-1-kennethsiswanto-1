@@ -29,7 +29,7 @@
         if(arr[j] == -1){
         int kanan = -1; // set default kanan -1 untuk traversal
         // asumsi kiri pasti tidak ada yang -1 karena sudah diubah di loop sebelumnya
-
+            
             for(int l = j+1; l < N; l++){
                     if(arr[l] != -1){
                         kanan = arr[l]; // kanan jadi data kanan tidak -1
@@ -37,18 +37,19 @@
                     }
             }
             
-            if(kanan != -1 && arr[j-1] != -1){
+            if(kanan != -1 && arr[j-1] != -1 && j != 0){
                 arr[j] = (kanan+arr[j-1])/2;
             }
             else if(kanan != -1){
                 arr[j] = kanan;
             }
-            else if(arr[j-1] != -1){ // formalitas(?)
+            else if(arr[j-1] != -1 && j != 0){
                 arr[j] = arr[j-1];
             }
-            else {
+            else{
                 arr[j] = 0;
             }
+            
         }
     }
 

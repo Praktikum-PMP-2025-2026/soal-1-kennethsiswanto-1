@@ -10,8 +10,16 @@
 
  #include <stdio.h>
  #include <string.h>
- #include <math.h>
-  
+
+
+ int floormanual(double x) {
+    int i = (int)x; // i = integralnya saja dari x
+    if (x < 0 && x != i) {
+        return i - 1; // situasi negatif
+    }
+    return i;
+}
+
  int main() {
     int N;
     scanf("%d", &N);
@@ -39,7 +47,7 @@
             }
             
             if(kanan != -1 && arr[j-1] != -1 && j != 0){
-                arr[j] = floor((kanan+arr[j-1])/2);
+                arr[j] = floormanual((kanan+arr[j-1])/2);
             }
             else if(kanan != -1){
                 arr[j] = kanan;

@@ -13,10 +13,10 @@
 
 
  int floormanual(int x) {
-    if (x < 0 && x != i) {
-        return i - 1; // situasi negatif
+    if (x < 0) {
+        return x - 1; // situasi negatif
     }
-    return i;
+    return x;
 }
 
  int main() {

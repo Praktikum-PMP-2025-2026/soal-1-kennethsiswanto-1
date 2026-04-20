@@ -38,7 +38,7 @@
             }
             
             if(kanan != -1 && arr[j-1] != -1 && j != 0){
-                arr[j] = (kanan+arr[j-1])/2;
+                arr[j] = floor((kanan+arr[j-1])/2);
             }
             else if(kanan != -1){
                 arr[j] = kanan;

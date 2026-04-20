@@ -12,8 +12,7 @@
  #include <string.h>
 
 
- int floormanual(long x) {
-    int i = (int)x; // i = integralnya saja dari x
+ int floormanual(int x) {
     if (x < 0 && x != i) {
         return i - 1; // situasi negatif
     }

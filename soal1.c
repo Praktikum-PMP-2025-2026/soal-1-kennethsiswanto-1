@@ -56,7 +56,12 @@
     // Recover
     printf("RECOVERED ");
     for(int m = 0; m<N; m++){
+        if(m != N-1){
         printf("%d ", arr[m]);
+        }
+        else if(m = N-1){
+        printf("%d", arr[m]);
+        }
     }
     printf("\n");
 

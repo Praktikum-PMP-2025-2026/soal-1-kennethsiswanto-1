@@ -14,10 +14,10 @@
 
  int floormanual(long x) {
     int i = (int)x;
-    if (x < 0 && i != 1) {
-        return x - 1; // situasi negatif
+    if (x < 0) {
+        return i - 1; // situasi negatif
     }
-    return x;
+    return i;
 }
 
  int main() {

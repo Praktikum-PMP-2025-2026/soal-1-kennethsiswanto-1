@@ -37,7 +37,7 @@
                     }
             }
             
-            if(kanan != -1 & arr[j-1] != -1){
+            if(kanan != -1 && arr[j-1] != -1){
                 arr[j] = (kanan+arr[j-1])/2;
             }
             else if(kanan != -1){
@@ -52,7 +52,7 @@
         }
     }
 
-
+    printf("\n");
     // Recover
     printf("RECOVERED ");
     for(int m = 0; m<N; m++){
@@ -81,6 +81,6 @@
     }
 
     printf("MAX_SUM %d", maxsum);
-    printf("\n");
+    // printf("\n");
     return 0;
 }

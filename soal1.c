@@ -81,5 +81,6 @@
     }
 
     printf("MAX_SUM %d", maxsum);
+    printf("\n");
     return 0;
 }
